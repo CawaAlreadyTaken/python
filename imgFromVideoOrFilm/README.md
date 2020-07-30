@@ -1,4 +1,4 @@
-#imgFromVideoOrFilm
+# imgFromVideoOrFilm
 
 Not a good name for a python project, i know and i am sorry.
 
