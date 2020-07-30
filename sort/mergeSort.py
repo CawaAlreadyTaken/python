@@ -17,12 +17,10 @@ def main():
             i+=1
             el.append(int(a))
     print("# Before: ", el)
-    count = merge_sort(el)
+    merge_sort(el)
     print("# After: ", el)
-    print("# N. of operations needed: ", count)
 
 def merge_sort(array):
-    count = 0
     half = len(array)//2
     left = array[:half]
     right = array[half:]
@@ -47,7 +45,7 @@ def merge_sort(array):
         j+=1
     for i in range(len(array1)):
         array[i] = array1[i]
-    return count
+    return
 
 
 if (__name__ == "__main__"):

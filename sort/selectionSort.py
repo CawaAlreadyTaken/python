@@ -17,23 +17,17 @@ def main():
             i+=1
             el.append(int(a))
     print("# Before: ", el)
-    count = selection_sort(el)
+    selection_sort(el)
     print("# After: ", el)
-    print("# N. of operations needed: ", count)
 
 def selection_sort(array):
-    count = 0
     for i in range(len(array)):
-        count+=1
         ind_min = i
         for j in range(i+1, len(array)):
-            count+=1
             if (array[j] < array[ind_min]):
-                count=+1
                 ind_min = j
-        count+=2
         array[i], array[ind_min] = array[ind_min], array[i]
-    return count
+    return 
 
 if (__name__ == "__main__"):
     main()

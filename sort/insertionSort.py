@@ -17,26 +17,20 @@ def main():
             i+=1
             el.append(int(a))
     print("# Before: ", el)
-    count = insertion_sort(el)
+    insertion_sort(el)
     print("# After: ", el)
-    print("# N. of operations needed: ", count)
 
 def insertion_sort(array):
-    count = 0
     for i in range(1, len(array)):
-        count += 2
         k = array[i]
         j = i-1
         while (j>=0):
-            count+=1
             if (k > array[j]):
                 break
-            count+=2
             array[j+1] = array[j]
             j-=1
-        count+=1
         array[j+1] = k
-    return count
+    return
 
 
 if (__name__ == "__main__"):
