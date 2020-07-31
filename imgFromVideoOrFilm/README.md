@@ -2,7 +2,7 @@
 
 Not a good name for a python project, i know and i am sorry.
 
-This script will take a video as an input and will produce an image. Every pixel of the output image will be the average of the values of the pixels during the whole video. 
+This script will take a video as an input and will produce an image. Every pixel of the output image will be the average of the values of the pixel during the whole video. 
 
 Two modes are available: arithmetic mean and root mean square.
 
