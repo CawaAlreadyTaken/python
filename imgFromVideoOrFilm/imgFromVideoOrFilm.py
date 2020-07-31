@@ -3,6 +3,7 @@ import os
 from PIL import Image
 from math import sqrt
 from pathlib import Path
+from progress.bar import IncrementalBar
 
 def takeRate():
     Rate = int(input("# I will take a frame every X frames. Choose X: \n- "))
@@ -76,20 +77,24 @@ frameTot = int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
 print("# Width: "+str(cols)+", Height: "+str(rows))
 rate = int(takeRate())
 
-print("# Collecting all the pixels value..")
+#print("# Collecting all the pixels value..")
+bar = IncrementalBar('# Collecting pixels values..', max = frameTot/rate+1)
 
 while success:
     if (count%rate==0):
         for i in range(rows):
             for j in range(cols):
                 cache[i][j].append(image[i,j])
+        bar.next()
     success,image = vidcap.read()
     count += 1 
 
+bar.finish()
+
 frames = int(count/rate)
-print("# Frames taken:"+str(frames))
+print("# Frames taken:"+str(frames+1))
 print("# Creating the image..")
-print("# It will take some time.")
+print("# This may take some time.")
 
 new = Image.new('RGB', (cols, rows), color = 'white')
 nuova = new.load()
