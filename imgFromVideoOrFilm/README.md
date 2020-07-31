@@ -9,3 +9,9 @@ Two modes are available: arithmetic mean and root mean square.
 Mind that the video file **MUST** be inside the same folder as the script, and you will need to indicate the full name (with `."extension"` aswell).
 
 An `images` folder for the output images will be created if not existant yet
+
+Run it with:
+
+```
+python imgFromVideoOrFilm.py
+```
